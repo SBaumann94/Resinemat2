@@ -32,7 +32,7 @@ const text3 =
             <li>Csoda ásó</li>
         </ul>
     </div>
-const timer =3000 //images appear 3 second after load
+const timer = 3000 //images appear 3 second after load
 
 class ImageWithText extends React.Component {
     constructor(props) {
@@ -75,18 +75,12 @@ class ImageWithText extends React.Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
     render() {
-        let ret;
-        if (this.state.theposition>0.1||(this.state.passed&&window.innerWidth>768)) {
-            ret = <div className={"main-image-div "}>
-                <img className={"main-image "} alt={"picture "+ this.props.picCode}
-                    src={this.props.picCode === 1 ? pic1 : this.props.picCode === 2 ? pic2 : pic3} width="100%" />
-                <p className={"text-on-image "}><span>{this.props.picCode === 1 ? text1 : this.props.picCode === 2 ? text2 : text3}</span></p>
-            </div >
-        }
-        else {
-            ret = <div></div>
-        }
-        return ret;
+        return (
+        <div className={"main-image-div "}>
+            <img className={"main-image "} alt={"picture " + this.props.picCode}
+                src={this.props.picCode === 1 ? pic1 : this.props.picCode === 2 ? pic2 : pic3} width="100%" />
+            <p className={"text-on-image "}><span>{this.props.picCode === 1 ? text1 : this.props.picCode === 2 ? text2 : text3}</span></p>
+        </div >);
     }
 }
 

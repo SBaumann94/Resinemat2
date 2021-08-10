@@ -3,9 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import logo from './resources/Resinemat_logo-01.png'
-import pic1 from './resources/pictures/1.jpg'
-import pic2 from './resources/pictures/2.jpg'
-import pic3 from './resources/pictures/3.jpg'
 
 import { Container, Row, Col } from 'react-bootstrap';
 import ImageWithText from './ImageWithText';
@@ -40,18 +37,18 @@ class App extends React.Component {
                 <img className="logo-image" src={logo} width="100%" />
               </Col>
               <Col xs={12} sm={12} md={4} lg={4} className="text-center">
-                <p className="text-just lg-text"><strong>Fő tevékenységi körünk a minőségi CNC megmunkálás, valamint egyedi alkatrészek és célberendezések tervezése és gyártása.</strong></p>
+                <p className="text-just lg-text main-text"><strong>Fő tevékenységi körünk a minőségi CNC megmunkálás, valamint egyedi alkatrészek és célberendezések tervezése és gyártása.</strong></p>
               </Col>
             </Row>
             <Row>
               <Col sm={12} md={4} className="reactive-text">
-                <p>24 év szakmai tapasztalat</p>
+                <p className="main-text">24 év szakmai tapasztalat</p>
               </Col>
               <Col sm={12} md={4} className="reactive-text">
-                <p>20+ partnercég</p>
+                <p className="main-text">20+ partnercég</p>
               </Col>
               <Col sm={12} md={4} className="reactive-text">
-                <p>1000+ legyártott termék</p>
+                <p className="main-text">1000+ legyártott termék</p>
               </Col>
               <Col className="image-col" xs={12}><div className="line"/>
               </Col>

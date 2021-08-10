@@ -54,14 +54,18 @@ html, body {
   padding: 10px;
   line-height: 150%;
   border-radius: 10px;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .slogan {
   padding: 2%;
   text-align: left;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: black;
   font-size: larger;
+}
+.main-text{
+  font-family: 'Roboto Slab', sans-serif;
 }
 .text-just{
   text-align: justify;

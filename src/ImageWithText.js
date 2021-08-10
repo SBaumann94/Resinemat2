@@ -78,7 +78,7 @@ class ImageWithText extends React.Component {
         let ret;
         if (this.state.theposition>0.1||(this.state.passed&&window.innerWidth>768)) {
             ret = <div className={"main-image-div "}>
-                <img className={"main-image "}
+                <img className={"main-image "} alt={"picture "+ this.props.picCode}
                     src={this.props.picCode === 1 ? pic1 : this.props.picCode === 2 ? pic2 : pic3} width="100%" />
                 <p className={"text-on-image "}><span>{this.props.picCode === 1 ? text1 : this.props.picCode === 2 ? text2 : text3}</span></p>
             </div >

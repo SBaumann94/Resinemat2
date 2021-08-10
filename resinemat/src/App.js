@@ -8,6 +8,7 @@ import pic2 from './resources/pictures/2.jpg'
 import pic3 from './resources/pictures/3.jpg'
 
 import { Container, Row, Col } from 'react-bootstrap';
+import ImageWithText from './ImageWithText';
 
 class App extends React.Component {
   render() {
@@ -52,15 +53,18 @@ class App extends React.Component {
               <Col sm={12} md={4} className="reactive-text">
                 <p>1000+ legyártott termék</p>
               </Col>
-              <Col className="pic-col" xs={12}><div className="line"/>
+              <Col className="image-col" xs={12}><div className="line"/>
               </Col>
             </Row>
             <Row>
-              <Col className="pic-col" xs={12}>
-
-                <img className="main-image" src={pic1} width="100%" />
-                <img className="main-image" src={pic2} width="100%" />
-                <img className="main-image" src={pic3} width="100%" />
+            <Col className="image-col" xs={12} md={6} lg={4}>
+              <ImageWithText picCode={1}/>
+              </Col>
+              <Col className="image-col" xs={12} md={6} lg={4}>
+              <ImageWithText picCode={2}/>
+              </Col>
+              <Col className="image-col" xs={12} md={12} lg={4}>
+              <ImageWithText picCode={3}/>
               </Col>
             </Row>
           </Container>

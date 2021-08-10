@@ -34,7 +34,7 @@ class App extends React.Component {
                 </i></h1>
               </Col>
               <Col sm={0} md={4} lg={4} >
-                <img className="logo-image" src={logo} width="100%" />
+                <img className="logo-image" src={logo} alt="logo"width="100%" />
               </Col>
               <Col xs={12} sm={12} md={4} lg={4} className="text-center">
                 <p className="text-just lg-text main-text"><strong>Fő tevékenységi körünk a minőségi CNC megmunkálás, valamint egyedi alkatrészek és célberendezések tervezése és gyártása.</strong></p>

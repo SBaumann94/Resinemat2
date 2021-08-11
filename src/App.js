@@ -107,7 +107,7 @@ class App extends React.Component {
         <Container className="footer">
           <Row className="text-center footer-text">
             <Col xs={12} sm={12} md={6} lg={4} >
-              <p><a>Adatvédelmi tájékoztató</a></p>
+              <p>Adatvédelmi tájékoztató</p>
             </Col>
             <Col xs={12} sm={12} md={6} lg={4} >
               <p>Az oldalt készítette a <a href="http://bausoft.hu/">Bausoft Pécsvárad Kft.</a></p>

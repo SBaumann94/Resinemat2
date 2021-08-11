@@ -110,7 +110,6 @@ class App extends React.Component {
               <p>Adatvédelmi tájékoztató</p>
             </Col>
             <Col xs={12} sm={12} md={6} lg={4} >
-              <p>Az oldalt készítette a <a href="http://bausoft.hu/">Bausoft Pécsvárad Kft.</a></p>
             </Col>
             <Col xs={12} sm={12} md={6} lg={4} >
               <p>Resinemat Kft 2800, Tatabánya Banyi János utca 49. </p>

@@ -22,7 +22,7 @@ html, body {
 }
 
 .layer {
-    background-color: #EDEEEF;
+    background-color: #FFFFFF;
     position: inherit;
     min-height: 100vh;
     min-width: 100vw;
@@ -35,8 +35,12 @@ html, body {
   position: relative; 
   width: 100%; /* for IE 6 */
   animation: fade 1.5s;
+  
 }
-
+.footer{
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
 .text-on-image { 
   position:absolute; 
   top: 10%; 
@@ -46,26 +50,40 @@ html, body {
   font-size: larger;
 }
 
-.text-on-image div { 
-  list-style: none;
+.text-below-image, .dark-row  { 
   color: white; 
   font: bold 'Bebas Neue', Sans-Serif; 
   letter-spacing: -1px;  
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
   line-height: 150%;
-  border-radius: 10px;
+  border-radius: 30px;
   font-family: 'Fira Sans', sans-serif;
 }
-
-.slogan {
-  padding: 2%;
-  text-align: left;
-  font: bold 'Bebas Neue', sans-serif;
-  font-size: larger;
+.text-below-image{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .main-text{
+  list-style: none;
   font-family: 'Roboto Slab', sans-serif;
+  font-size: larger;
+}
+Nav h6{
+  padding: 10px;
+}
+
+
+.slogan {
+  font: bold 'Bebas Neue', sans-serif;
+  font-size: large;
+  text-align:right;
+}
+.algin-center{
+  line-height: 300%;
+  display: flex;
+  align-items: center;
 }
 .text-just{
   text-align: justify;
@@ -77,9 +95,6 @@ html, body {
   text-align: center;
   margin:auto
 }
-.lg-text{
-  font-size:larger;
-}
 .reactive-text{
   text-align: center;
   font-size: x-large;
@@ -88,15 +103,23 @@ html, body {
 .main-image{
   padding: 3%;
   padding-right: 0;
-  border-radius: 50px;
+  border-radius: 100%;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 200px;
 }
 .image-col{
   transition-duration:1s;
+  border-radius: 30px;
 }
 .image-col:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
+.icon-row{
+  margin-bottom: 20px;
+}
 .icon-col{
   overflow:hidden;
   transition-duration:0.6s;
@@ -104,6 +127,7 @@ html, body {
 .icon-col:hover{
   background-color: #B56636;
   color:#EDEEEF;
+  cursor: pointer;
 }
 .pad-top{
   padding-top:5vh;
@@ -112,7 +136,7 @@ html, body {
 .line {
   background-color: #B56636;
   height: 20px;
-  margin: 10px;
+  margin: 20px;
 }
 .bg-dark {
   background-color: #B56636;
@@ -125,4 +149,32 @@ html, body {
 .footer-text{
   font-size: smaller;
   white-space: nowrap;  
+}
+
+.about-div, .contact-div{
+  padding: 5%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.each-slide{
+  min-height: 60vh;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon-col a{
+  color:inherit;
+  text-decoration: none;
+}
+.icon-col a:hover{
+  color:white;
+}
+input, .button-col{
+  width: 100%;
+  margin:10px;
+}
+.message-input{
+  margin: 30px;
 }

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-import EmailForm from './EmailForm';
+
 
 
 class Contact extends React.Component {

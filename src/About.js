@@ -11,7 +11,7 @@ const slideProperties = {
     pauseOnHover: false,
     canSwipe: false
 };
-class About_Us extends React.Component {
+class About extends React.Component {
     render() {
         return (
             <div className="about-div">
@@ -56,4 +56,4 @@ class About_Us extends React.Component {
     }
 }
 
-export default About_Us;
+export default About;

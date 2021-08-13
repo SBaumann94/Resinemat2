@@ -18,7 +18,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import Home from './Home';
-import About_Us from './About_Us';
+import About from './About';
 import Contact from './Contact';
 
 // run this function from an event handler or an effect to execute scroll 
@@ -38,7 +38,7 @@ class App extends React.Component {
                     <Nav.Item as="h6" ><li><FontAwesomeIcon icon={faPhoneAlt} />+36(34)319-134</li></Nav.Item>
                     <Nav.Item as="h6"><li><FontAwesomeIcon icon={faMobileAlt} /> +36(70)930-4890</li></Nav.Item>
                     <Nav.Link href="/">Főoldal</Nav.Link>
-                    <Nav.Link href="/about_us">Rólunk</Nav.Link>
+                    <Nav.Link href="/about">Rólunk</Nav.Link>
                     <Nav.Link href="/contact">Kapcsolat</Nav.Link>
                     <Nav.Link href="https://www.facebook.com/resinemat"><FontAwesomeIcon icon={faFacebook} size="2x" /> </Nav.Link>
 
@@ -50,8 +50,8 @@ class App extends React.Component {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/about_us">
-                <About_Us />
+              <Route exact path="/about">
+                <About />
               </Route>
               <Route exact path="/contact">
                 <Contact />

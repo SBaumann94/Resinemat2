@@ -68,7 +68,7 @@ class Home extends React.Component {
                         <p><FontAwesomeIcon icon={faCommentDollar} size="3x" />  Kérjen tőlünk árajánlatot</p></a>
                     </Col>
 
-                    <Col className="icon-col text-center main-text" xs={12} md={6} lg={4} ><a href="/about_us">
+                    <Col className="icon-col text-center main-text" xs={12} md={6} lg={4} ><a href="/about">
                         <p><FontAwesomeIcon icon={faImages} size="3x" />  Tekintse meg korábbi munkáink</p></a>
                     </Col>
 

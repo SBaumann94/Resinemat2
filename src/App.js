@@ -46,8 +46,8 @@ class App extends React.Component {
             </Navbar>
             <Switch>
               <Route exact path="/" component={Home}></Route>
-              <Route exact path="/about" component={About}></Route>
-              <Route exact path="/contact" component={Contact}></Route>
+              <Route path="/about" component={About}></Route>
+              <Route path="/contact" component={Contact}></Route>
             </Switch>
             <Container className="footer">
               <Row className="text-center footer-text">

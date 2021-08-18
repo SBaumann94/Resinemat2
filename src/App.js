@@ -26,9 +26,8 @@ import Contact from './Contact';
 class App extends React.Component {
   render() {
     return (
-      <div className="background">
-        <div className="App layer ">
-          <Router>
+      <Router>
+        <div className="App layer">
             <Navbar bg="dark" variant="dark" expand="lg">
               <Container>
                 <Navbar.Brand href="/"><img className="" src={logo2} alt="logo2" width="70vh" /></Navbar.Brand>
@@ -46,25 +45,24 @@ class App extends React.Component {
               </Container>
             </Navbar>
             <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/about" component={About}/>
-              <Route exact path="/contact" component={Contact}/>
+              <Route exact path="/" component={Home}></Route>
+              <Route exact path="/about" component={About}></Route>
+              <Route exact path="/contact" component={Contact}></Route>
             </Switch>
-          </Router>
-        </div>
-        <Container className="footer">
-          <Row className="text-center footer-text">
-            <Col xs={12} sm={12} md={6} lg={4} >
-              <p>Adatvédelmi tájékoztató</p>
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={4} >
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={4} >
-              <p>Resinemat Kft 2800, Tatabánya Tavaszmező u 4/b. </p>
-            </Col>
-          </Row>
-        </Container>
-      </div >);
+            <Container className="footer">
+              <Row className="text-center footer-text">
+                <Col xs={12} sm={12} md={6} lg={4} >
+                  <p>Adatvédelmi tájékoztató</p>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={4} >
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={4} >
+                  <p>Resinemat Kft 2800, Tatabánya Tavaszmező u 4/b. </p>
+                </Col>
+              </Row>
+            </Container>
+        </div >
+      </Router>);
   }
 }
 

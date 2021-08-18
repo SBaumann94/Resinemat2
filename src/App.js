@@ -41,21 +41,14 @@ class App extends React.Component {
                     <Nav.Link href="/about">Rólunk</Nav.Link>
                     <Nav.Link href="/contact">Kapcsolat</Nav.Link>
                     <Nav.Link href="https://www.facebook.com/resinemat"><FontAwesomeIcon icon={faFacebook} size="2x" /> </Nav.Link>
-
                   </Nav>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/about">
-                <About />
-              </Route>
-              <Route exact path="/contact">
-                <Contact />
-              </Route>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/about" component={About}/>
+              <Route exact path="/contact" component={Contact}/>
             </Switch>
           </Router>
         </div>

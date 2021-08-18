@@ -37,7 +37,7 @@ class App extends React.Component {
                     <Nav.Item as="h6" ><li><FontAwesomeIcon icon={faPhoneAlt} />+36(34)319-134</li></Nav.Item>
                     <Nav.Item as="h6"><li><FontAwesomeIcon icon={faMobileAlt} /> +36(70)930-4890</li></Nav.Item>
                     <Nav.Link href="/">Főoldal</Nav.Link>
-                    <Nav.Link href="/about">Rólunk</Nav.Link>
+                    <Nav.Link to="/about" href="/about">Rólunk</Nav.Link>
                     <Nav.Link href="/contact">Kapcsolat</Nav.Link>
                     <Nav.Link href="https://www.facebook.com/resinemat"><FontAwesomeIcon icon={faFacebook} size="2x" /> </Nav.Link>
                   </Nav>

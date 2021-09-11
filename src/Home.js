@@ -98,7 +98,7 @@ class Home extends React.Component {
                 <Row>
                     <Col xs={12}><div className="line" /></Col>
                     <Col xs={12}>
-                        <div className="map" ref={this.myMap}><iframe title="RESINEMAT Map" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;hl=hun&amp;q=Tatab%C3%A1nya,%20Resinemat%20Kft.,%20Tavaszmez%C5%91%20utca+(Resinemat%20Kft.)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"></iframe></div>
+                        <div className="map" ref={this.myMap}><iframe title="RESINEMAT Map" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?width=100%25&amp;hl=hun&amp;q=Tatab%C3%A1nya,%20Resinemat%20Kft.,%20Tavaszmez%C5%91%20utca+(Resinemat%20Kft.)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameBorder="0"></iframe></div>
                     </Col>
                 </Row>
             </Container>

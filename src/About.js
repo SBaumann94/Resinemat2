@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import pic1 from './resources/pictures/1.jpg';
+import pic1 from './resources/pictures/1.png';
 import pic2 from './resources/pictures/2.jpg';
 import pic3 from './resources/pictures/3.jpg';
 
@@ -18,15 +18,19 @@ class About extends React.Component {
                 <h2>Rólunk</h2>
                 <Slide {...slideProperties} className="slide-container">
                     <div >
-                        <div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
-                            <ul>
+                        <div className="each-slide black-on-white" style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
+                        {/*<ul>
                                 Géppark:
                                 <li>CNC megmunkáló központ (4D) </li>
                                 <li>CNC maró</li>
                                 <li>CNC eszterga</li>
                                 <li>Optikai köszörű</li>
-                                <li>Szikraforgácsolás (Huzalszikra, Tömbszikra)</li>
+                                <li>Szikraforgácsolás<ul>
+                                    <li>Huzalszikra</li>
+                                    <li>Tömbszikra</li></ul>
+                                </li>
                             </ul>
+                        */}
                         </div>
                     </div>
                     <div >

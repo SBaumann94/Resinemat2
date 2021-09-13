@@ -22,7 +22,7 @@ function EmailForm() {
         if (toSend.from_name === "") {
             addToast('Adja meg a nevét!', { appearance: 'error' });
         } 
-        else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(toSend.from_email))) {
+        else if (!(/^\w+([.-]?\w+)*@\w+([\.-]?\w+)*(.\w{2,3})+$/.test(toSend.from_email))) {
             addToast('Érvénytelen e-mail cím.', { appearance: 'error' });
         }
         else if (toSend.message === "") {

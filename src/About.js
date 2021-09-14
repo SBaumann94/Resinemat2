@@ -4,10 +4,14 @@ import 'react-slideshow-image/dist/styles.css';
 import pic0 from './resources/pictures/1.png';
 import pic1 from './resources/pictures/2.jpg';
 import pic2 from './resources/pictures/3.jpg';
+import pic3 from './resources/pictures/4.jpg';
+import pic4 from './resources/pictures/5.jpg';
+import pic5 from './resources/pictures/6.jpg';
+import pic6 from './resources/pictures/7.jpg';
 import picMain from './resources/pictures/123.jpg'
 import { Container, Row, Col } from 'react-bootstrap';
 
-const slideImages = [pic0, pic1, pic2];
+const slideImages = [pic0, pic1, pic2, pic3, pic4, pic5, pic6];
 const slideProperties = {
     duration: 5000,
     pauseOnHover: false,
@@ -51,6 +55,10 @@ class About extends React.Component {
                     <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[0]})` }}></div></div>
                     <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[1]})` }}></div></div>
                     <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[2]})` }}></div></div>
+                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[3]})` }}></div></div>
+                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[4]})` }}></div></div>
+                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[5]})` }}></div></div>
+                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[6]})` }}></div></div>
                 </Slide>
                 <div className="line" />
                 <h3>Cégünk története</h3>

@@ -72,10 +72,13 @@ html, body {
   margin-left: 10%;
   margin-right: 10%;
 }
-.main-text{
+.main-text,.sub-text{
   list-style: none;
   font-family: 'Roboto Slab', sans-serif;
   font-size: larger;
+}
+.sub-text{
+  font-size:initial;
 }
 .black-on-white{
   color: black;
@@ -249,4 +252,9 @@ input[type=checkbox]
   /* Checkbox text */
   font-size: 110%;
   display: inline;
+}
+.about-main-pic{
+  width: 100%;
+  border-radius: 20px;
+  opacity: 90%;
 }

@@ -5,7 +5,7 @@ import pic2 from './resources/pictures/2.jpg'
 import pic3 from './resources/pictures/3.jpg'
 
 const text1 ="Géppark"
-const text2 ="Célgéptervezés"
+const text2 ="Célgép tervezés"
 const text3 ="Prototípus fejlesztés"
 const timer = 3000 //images appear 3 second after load
 

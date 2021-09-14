@@ -47,9 +47,19 @@ class About extends React.Component {
                             </Col>
                             <Col xs={12} sm={6} md={4} >
                                 <h4 className=" text-center main-text">Célgép tervezés:</h4>
+                                <ul className="sub-text">
+                                    <li>Funkcionális vasszerkezetek</li>
+                                    <li>Ponthegesztő gépek</li>
+                                    <li>Villamos vezérlések</li>
+                                    <li>Automatizálás</li>
+                                </ul>
                             </Col>
                             <Col xs={12} sm={6} md={4} >
                                 <h4 className=" text-center main-text">Prototípus fejlesztés:</h4>
+                                <ul className="sub-text">
+                                    <li>Kotyogó berendezés</li>
+                                    <li>Csoda ásó</li>
+                                </ul>
                             </Col>
                         </Row>
                     </Container>

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import Zoom from 'react-reveal/Zoom';
+import { Container, Row, Col } from 'react-bootstrap';
+
 import pic0 from './resources/pictures/1.png';
 import pic1 from './resources/pictures/2.jpg';
 import pic2 from './resources/pictures/3.jpg';
@@ -9,7 +12,6 @@ import pic4 from './resources/pictures/5.jpg';
 import pic5 from './resources/pictures/6.jpg';
 import pic6 from './resources/pictures/7.jpg';
 import picMain from './resources/pictures/123.jpg'
-import { Container, Row, Col } from 'react-bootstrap';
 
 const slideImages = [pic0, pic1, pic2, pic3, pic4, pic5, pic6];
 const slideProperties = {
@@ -22,34 +24,36 @@ class About extends React.Component {
         return (
             <div className="about-div">
                 <h2>Rólunk</h2>
-                <Container className="">
-                    <Row className="">
-                        <Col xs={12}>
-                            <img className='about-main-pic' alt={"Rólunk_fő_kép"} src={picMain} />
-                        </Col>
-                    </Row>
-                    <Row className="">
-                        <Col xs={12} sm={6} md={4} >
-                            <h4 className="text-center main-text">Géppark:</h4>
-                            <ul className="sub-text">
-                                <li>CNC megmunkáló központ (4D) </li>
-                                <li>CNC maró</li>
-                                <li>CNC eszterga</li>
-                                <li>Optikai köszörű</li>
-                                <li>Szikraforgácsolás<ul className="sub-text">
-                                    <li>Huzalszikra</li>
-                                    <li>Tömbszikra</li></ul>
-                                </li>
-                            </ul>
-                        </Col>
-                        <Col xs={12} sm={6} md={4} >
-                            <h4  className=" text-center main-text">Célgép tervezés:</h4>
-                        </Col>
-                        <Col xs={12} sm={6} md={4} >
-                            <h4  className=" text-center main-text">Prototípus fejlesztés:</h4>
-                        </Col>
-                    </Row>
-                </Container>
+                <Zoom>
+                    <Container className="">
+                        <Row className="">
+                            <Col xs={12}>
+                                <img className='about-main-pic' alt={"Rólunk_fő_kép"} src={picMain} />
+                            </Col>
+                        </Row>
+                        <Row className="">
+                            <Col xs={12} sm={6} md={4} >
+                                <h4 className="text-center main-text">Géppark:</h4>
+                                <ul className="sub-text">
+                                    <li>CNC megmunkáló központ (4D) </li>
+                                    <li>CNC maró</li>
+                                    <li>CNC eszterga</li>
+                                    <li>Optikai köszörű</li>
+                                    <li>Szikraforgácsolás<ul className="sub-text">
+                                        <li>Huzalszikra</li>
+                                        <li>Tömbszikra</li></ul>
+                                    </li>
+                                </ul>
+                            </Col>
+                            <Col xs={12} sm={6} md={4} >
+                                <h4 className=" text-center main-text">Célgép tervezés:</h4>
+                            </Col>
+                            <Col xs={12} sm={6} md={4} >
+                                <h4 className=" text-center main-text">Prototípus fejlesztés:</h4>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Zoom>
                 <div className="line" />
                 <Slide {...slideProperties} className="slide-container">
                     <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[0]})` }}></div></div>
@@ -71,6 +75,7 @@ class About extends React.Component {
                     <br />Bízunk benne, hogy Önt is mihamarabb a partnereink között köszönthetjük!
                 </p>
                 <h5>Rabi Endre, ügyvezető</h5>
+                <div className="line" />
 
             </div>);
     }

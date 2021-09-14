@@ -218,9 +218,6 @@ input, .button-col{
   width: 50vw;
   justify-content: space-around;
 }
-.cb-email{
-  margin: 15px;
-}
 
 .email-form input,.email-form button, .email-form textarea{
   margin-bottom: 10px;

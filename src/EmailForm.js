@@ -94,16 +94,15 @@ function EmailForm() {
                     value={toSend.message}
                     onChange={handleChange}
                 />
-                <br />
-                    <Checkbox
+                <br /><Checkbox
                         className='cb_email'
                         id='cb_email'
                         name='cb_email'
-                        defaultChecked='false'
+                        defaultChecked={false}
                         onChange={handleCBChange}
-                    >Elfogadom az <a href="https://www.w3schools.com">Általános szerződési feltételeket</a></Checkbox>
+                    />Elfogadom az <a href="https://www.w3schools.com">Általános szerződési feltételeket</a>
                 <br />
-                <button className='btn bg-secondary'type='submit' >Küldés</button>
+                <button className='btn 'type='submit' >Küldés</button>
             </form>
         </div>
     );

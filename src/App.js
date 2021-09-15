@@ -69,10 +69,10 @@ class App extends React.Component {
           enableDeclineButton
           cookieName="cookie használat"
           style={{ background: "#B56636" }}
-          expires={365}
+          expires={14}
         ><p className="cookie-text">
         Ez a weboldal Cookie-kat használ<br/>
-        <span style={{ fontSize: "10px" }}>Cookie-kat használunk a tartalom és a közösségi média funkcióinak biztosításához és a forgalmunk elemzéséhez. <br/>Bővebb információ az <a href="https://www.w3schools.com"><strong>adatvédelmi tájékoztatóról itt</strong></a></span></p>
+        <span style={{ fontSize: "smaller" }}>Cookie-kat használunk a tartalom és a közösségi média funkcióinak biztosításához és a forgalmunk elemzéséhez. <br/>Bővebb információ az <a href="https://www.w3schools.com"><strong>adatvédelmi tájékoztatóról itt</strong></a></span></p>
       </CookieConsent>
       </Router>);
   }

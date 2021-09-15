@@ -14,7 +14,7 @@ class Contact extends React.Component {
             <div className="contact-div">
                 <h2>Kapcsolat</h2>
                 <Container>
-                    <h4>Küldjön üzenetet</h4>
+                    <h3>Küldjön üzenetet</h3>
                     <ToastProvider>
                         <EmailForm />
                     </ToastProvider>

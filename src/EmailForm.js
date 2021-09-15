@@ -68,7 +68,6 @@ function EmailForm() {
                     placeholder='Név'
                     value={toSend.from_name}
                     onChange={handleChange}
-                    width='30%'
                 />
                 <br />
                 <input

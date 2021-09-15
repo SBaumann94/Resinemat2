@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans','Roboto',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -232,9 +230,10 @@ input, .button-col{
   border: 1px solid;
 }
 
-.email-form .email_text{
+.email-form .email-text{
   height: 20vh;
   width: 100%;
+  margin: 10px;
 }
 .email-form input:hover,.email-form textarea:hover {
   background-color: rgba(255, 255, 255, 0.45);

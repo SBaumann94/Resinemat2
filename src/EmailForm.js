@@ -89,7 +89,7 @@ function EmailForm() {
                 <textarea
                     name='message'
                     placeholder='Üzenet'
-                    className='email_text'
+                    className='email-text'
                     value={toSend.message}
                     onChange={handleChange}
                 />

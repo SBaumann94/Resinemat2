@@ -28,11 +28,7 @@ function GDImageViewer(data) {
   const GOOGLE_DRIVE_URL_END = "%27+in+parents&key=";
   const GOOGLE_DRIVE_IMG_URL = "http://drive.google.com/uc?export=view&id=";
   const options = data.data.options;
-  const header = data.data.header;
-  useEffect(() => {
-    loadData();
-    loadSettings(options);
-  }, []);
+
 
   function loadSettings(options) {
     if (options.style) {
@@ -164,6 +160,7 @@ function GDImageViewer(data) {
             const target = newWindow ? "_blank" : ""
             return(renderMain(className, id, exclude, href, target, item, i))
           }
+          else return null;
         })}
     </div>
   );

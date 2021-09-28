@@ -7,7 +7,7 @@ import { faCommentDollar, faImages, faMapMarkedAlt, faPlusCircle } from '@fortaw
 import { Container, Row, Col } from 'react-bootstrap';
 import CountUp from 'react-countup';
 
-import logo from './resources/Resinemat_logo-01.png'
+import logo from './resources/HeaderPic.jpg'
 
 
 class Home extends React.Component {
@@ -22,16 +22,6 @@ class Home extends React.Component {
 
                 <Zoom>
                     <Row className="show-grid">
-                        <Col md={12} lg={4} xl={4} className="algin-center">
-                            <h1 className="text-center slogan"><i>
-                                A fejlődés kulcsa, hogy kreatívan és szabadon gondolkodhassunk.
-                            </i></h1>
-                        </Col>
-
-                        <Col md={12} lg={4} xl={2} />
-                        <Col md={12} lg={3} xl={5} >
-                            <img className="logo-image" src={logo} alt="logo" width="100%" />
-                        </Col>
                         {/*
                     <Col md={12} lg={1} xl={1} className="algin-center">
                         <ul className="main-text black-on-white text-right"><strong>

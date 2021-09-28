@@ -3,6 +3,8 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import Zoom from 'react-reveal/Zoom';
 import { Container, Row, Col } from 'react-bootstrap';
+import GDImageViewer from './GDImageViewer.js';
+import './GDImageViewer.css'
 
 import pic0 from './resources/pictures/1.png';
 import pic1 from './resources/pictures/2.jpg';
@@ -12,6 +14,49 @@ import pic4 from './resources/pictures/5.jpg';
 import pic5 from './resources/pictures/6.jpg';
 import pic6 from './resources/pictures/7.jpg';
 import picMain from './resources/pictures/123.jpg'
+
+const Options2 = {
+    // react style object
+    // https://reactjs.org/docs/dom-elements.html#style
+    style: {
+    },
+    // behavior when image is clicked
+    // if on click is empty (no modal or newWindow)
+    // current tab will show full image
+    // if modal true, image opens as overlay
+    // on current tab
+    // if new window is true, new tab is launched
+    // with image url
+    onClick: {
+        modal: true,
+        newWindow: false
+    }, 
+    //Use name of <FILE_NAME>.<EXTENSION> (image.png) to 
+    // specify which images not to render
+    exclude: {
+        //"1.jpg": true
+    },
+    //Use name of <FILE_NAME>.<EXTENSION> (image.png) to
+    //attach className attribute to a specific image
+    attachClass: {
+        "2.jpg": "test"
+    },
+    //Use name of <FILE_NAME>.<EXTENSION> (image.png) to
+    //attach id attribute to a specific image
+    attachId: {
+        "2.jpg": "test2"
+    },
+    // if set true, hover over opacity effect
+    // will be set
+    hover: true
+}
+const GDImageOptions = {
+    gkey: "{AIzaSyD9M7CoQ7XgloF0FSaQGbbcJjyA14qGzvg}",
+    dirId: "{1_SbJvoCCTR8xQy1hCVkxY0LpnZxTe_Uk}",
+    name: "tesztképek",
+    options: [Options2]
+}
+
 
 const slideImages = [pic0, pic1, pic2, pic3, pic4, pic5, pic6];
 const slideProperties = {
@@ -26,6 +71,10 @@ class About extends React.Component {
                 <h2>Rólunk</h2>
                 <Zoom>
                     <Container className="">
+                        <GDImageViewer data={GDImageOptions} />
+                        <Row className="">
+
+                        </Row>
                         <Row className="">
                             <Col xs={12}>
                                 <img className='about-main-pic' alt={"Rólunk_fő_kép"} src={picMain} />

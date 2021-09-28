@@ -7,7 +7,7 @@ import { faCommentDollar, faImages, faMapMarkedAlt, faPlusCircle } from '@fortaw
 import { Container, Row, Col } from 'react-bootstrap';
 import CountUp from 'react-countup';
 
-import logo from './resources/HeaderPic.jpg'
+//import logo from './resources/HeaderPic.jpg'
 
 
 class Home extends React.Component {

@@ -30,57 +30,51 @@ function GDImageViewer(data) {
   const options = data.data.options;
   const header = data.data.header;
 
-  
-  
-  
-  useEffect(() => {
-    async function loadData() {
-      await fetch(
-        GOOGLE_DRIVE_URL_START +
-        data.data.dirId +
-        GOOGLE_DRIVE_URL_END +
-        GOOGLE_API_KEY
-      )
-        .then(response => response.json())
-        .then(jsonResp => {
-          setImgIds(jsonResp.items);
-        });
+  function loadSettings(options) {
+    if (options.style) {
+      setStyle(options.style);
     }
-    loadData();
-    function loadSettings(options) {
-      if (options.style) {
-        setStyle(options.style);
+    if (options.onClick) {
+      setClickable(true);
+      if (options.onClick.newWindow) {
+        setNewWindw(true);
       }
-      if (options.onClick) {
-        setClickable(true);
-        if (options.onClick.newWindow) {
-          setNewWindw(true);
-        }
-        if (options.onClick.modal) {
-          setModal(true);
-        }
-      }
-      if (options.hover) {
-        setHover(true);
-      }
-      if (header) {
-        setShowHeader(true);
-      }
-  
-      if (options.attachClass) {
-        setClassNames(options.attachClass);
-      }
-  
-      if (options.attachId) {
-        setIds(options.attachId);
-      }
-      if (options.exclude) {
-        setExcludes(options.exclude);
+      if (options.onClick.modal) {
+        setModal(true);
       }
     }
+    if (options.hover) {
+      setHover(true);
+    }
+    if (header) {
+      setShowHeader(true);
+    }
+
+    if (options.attachClass) {
+      setClassNames(options.attachClass);
+    }
+
+    if (options.attachId) {
+      setIds(options.attachId);
+    }
+    if (options.exclude) {
+      setExcludes(options.exclude);
+    }
+  }
+
+  async function loadData() {
+    await fetch(
+      GOOGLE_DRIVE_URL_START +
+      data.data.dirId +
+      GOOGLE_DRIVE_URL_END +
+      GOOGLE_API_KEY
+    )
+      .then(response => response.json())
+      .then(jsonResp => {
+        setImgIds(jsonResp.items);
+      });
+  }
   
-    loadSettings(options);
-  }, []);
 
   function checkFormat(url) {
     return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
@@ -110,6 +104,9 @@ function GDImageViewer(data) {
   }
 
   const renderImages = (className, id, exclude, item ,i) => {
+    
+    loadData();
+    loadSettings(options);
     return (
       <>
         {!exclude && (

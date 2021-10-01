@@ -62,7 +62,7 @@ function GDImageViewer(data) {
     }
   }
 
-  async function loadData() {
+  function loadData() {
     await fetch(
       GOOGLE_DRIVE_URL_START +
       data.data.dirId +

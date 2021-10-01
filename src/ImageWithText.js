@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pic1 from './resources/1.png'
+import pic1 from './resources/1.jpg'
 import pic2 from './resources/2.jpg'
 import pic3 from './resources/3.jpg'
 

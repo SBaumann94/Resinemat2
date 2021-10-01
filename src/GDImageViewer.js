@@ -165,6 +165,7 @@ function GDImageViewer(data) {
             const target = newWindow ? "_blank" : ""
             return(renderMain(className, id, exclude, href, target, item, i))
           }
+          else return null
         })}
     </div>
   );

@@ -45,15 +45,17 @@ const GDProps={
     
         onClick: {
             modal: true,
-            newWindow: false
+            newWindow: true
         },
         
         //Use name of <FILE_NAME>.<EXTENSION> (image.png) to 
         // specify which images not to render
     
+        /*
         exclude: {
             "1.jpg": true
         },
+        
     
     
         //Use name of <FILE_NAME>.<EXTENSION> (image.png) to
@@ -71,7 +73,7 @@ const GDProps={
             "2.jpg": "test2"
         },
     
-    
+        */
     
         // if set true, hover over opacity effect
         // will be set
@@ -79,9 +81,6 @@ const GDProps={
         hover: true
     }
 }
-
-
-//test22
 
 class About extends React.Component {
     render() {

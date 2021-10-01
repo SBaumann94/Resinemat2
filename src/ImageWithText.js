@@ -20,14 +20,14 @@ class ImageWithText extends React.Component {
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
-    componentDidMount() {
+    UNSAFE_componentDidMount() {
         window.addEventListener('scroll', this.listenToScroll)
         this.interval = setInterval(() => this.setState({ passed: true }), timer);
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
 
-    componentWillUnmount() {
+    UNSAFE_componentWillUnmount() {
         window.removeEventListener('scroll', this.listenToScroll)
         clearInterval(this.interval);
         window.removeEventListener('resize', this.updateWindowDimensions);

@@ -4,94 +4,31 @@ import 'react-slideshow-image/dist/styles.css';
 import Zoom from 'react-reveal/Zoom';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import pic0 from './resources/pictures/1.png';
-import pic1 from './resources/pictures/2.jpg';
-import pic2 from './resources/pictures/3.jpg';
-import pic3 from './resources/pictures/4.jpg';
-import pic4 from './resources/pictures/5.jpg';
-import pic5 from './resources/pictures/6.jpg';
-import pic6 from './resources/pictures/7.jpg';
-import picMain from './resources/pictures/123.jpg'
-
-import GDImageViewer from './GDImageViewer';
-import './GDImageViewer.css';
+import picMain from './resources/123.jpg'
 
 
-const slideImages = [pic0, pic1, pic2, pic3, pic4, pic5, pic6];
 const slideProperties = {
     duration: 5000,
     pauseOnHover: false,
     canSwipe: false
 };
-
-const GDProps={
-    gkey: process.env.GOOGLE_API_KEY,
-    dirId: process.env.GOOGLE_DRIVE_PUBLIC_DIRECTORY_ID,
-    name: "GDProps",
-    options: {
-        // react style object
-        // https://reactjs.org/docs/dom-elements.html#style
-    
-        style: {
-        },
-    
-        // behavior when image is clicked
-        // if on click is empty (no modal or newWindow)
-        // current tab will show full image
-        // if modal true, image opens as overlay
-        // on current tab
-        // if new window is true, new tab is launched
-        // with image url
-    
-        onClick: {
-            modal: true,
-            newWindow: true
-        },
-        
-        //Use name of <FILE_NAME>.<EXTENSION> (image.png) to 
-        // specify which images not to render
-    
-        /*
-        exclude: {
-            "1.jpg": true
-        },
-        
-    
-    
-        //Use name of <FILE_NAME>.<EXTENSION> (image.png) to
-        //attach className attribute to a specific image
-    
-        attachClass: {
-            "2.jpg": "test"
-        },
-    
-    
-        //Use name of <FILE_NAME>.<EXTENSION> (image.png) to
-        //attach id attribute to a specific image
-    
-        attachId: {
-            "2.jpg": "test2"
-        },
-    
-        */
-    
-        // if set true, hover over opacity effect
-        // will be set
-    
-        hover: true
-    }
+function importAll(r) {
+    return r.keys().map(r);
 }
+
+const picList = importAll(require.context('./resources/pictures/', false, /\.(png|jpeg|jpg)$/));
 
 class About extends React.Component {
     render() {
+        var picsToRender = [];
+        for (var i = 0; i < picList.length; i++) {
+            picsToRender.push(<div key={i}><div  className="each-slide" style={{ 'backgroundImage': `url(${picList[i].default})` }}></div></div>)
+        }
         return (
             <div className="about-div">
                 <h2>Rólunk</h2>
                 <Zoom>
                     <Container className="">
-                        <Row className="">
-                            <GDImageViewer data={GDProps}/>
-                        </Row>
                         <Row className="">
                             <Col xs={12}>
                                 <img className='about-main-pic' alt={"Rólunk_fő_kép"} src={picMain} />
@@ -131,15 +68,7 @@ class About extends React.Component {
                     </Container>
                 </Zoom>
                 <div className="line" />
-                <Slide {...slideProperties} className="slide-container">
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[0]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[1]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[2]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[3]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[4]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[5]})` }}></div></div>
-                    <div><div className="each-slide" style={{ 'backgroundImage': `url(${slideImages[6]})` }}></div></div>
-                </Slide>
+                <Slide {...slideProperties} className="slide-container">{picsToRender}</Slide>
                 <div className="line" />
                 <h3>Cégünk története</h3>
                 <p className="about-text">

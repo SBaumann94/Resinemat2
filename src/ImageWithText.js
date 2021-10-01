@@ -1,8 +1,8 @@
 import React from 'react';
 
-import pic1 from './resources/pictures/1.png'
-import pic2 from './resources/pictures/2.jpg'
-import pic3 from './resources/pictures/3.jpg'
+import pic1 from './resources/1.png'
+import pic2 from './resources/2.jpg'
+import pic3 from './resources/3.jpg'
 
 const text1 ="Géppark"
 const text2 ="Célgép tervezés"

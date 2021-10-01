@@ -29,56 +29,55 @@ function GDImageViewer(data) {
   const GOOGLE_DRIVE_IMG_URL = "http://drive.google.com/uc?export=view&id=";
   const options = data.data.options;
   const header = data.data.header;
-
-
- 
   useEffect(() => {
-    
-      async function loadData() {
-        await fetch(
-          GOOGLE_DRIVE_URL_START +
-          data.data.dirId +
-          GOOGLE_DRIVE_URL_END +
-          GOOGLE_API_KEY
-        )
-          .then(response => response.json())
-          .then(jsonResp => {
-            setImgIds(jsonResp.items);
-          });
-      }
-      
-    function loadSettings(options) {
-        if (options.style) {
-          setStyle(options.style);
-        }
-        if (options.onClick) {
-          setClickable(true);
-          if (options.onClick.newWindow) {
-            setNewWindw(true);
-          }
-          if (options.onClick.modal) {
-            setModal(true);
-          }
-        }
-        if (options.hover) {
-          setHover(true);
-        }
-        if (header) {
-          setShowHeader(true);
-        }
-    
-        if (options.attachClass) {
-          setClassNames(options.attachClass);
-        }
-    
-        if (options.attachId) {
-          setIds(options.attachId);
-        }
-        if (options.exclude) {
-          setExcludes(options.exclude);
-        }
-      }
+    loadData();
+    loadSettings(options);
   }, []);
+
+  function loadSettings(options) {
+    if (options.style) {
+      setStyle(options.style);
+    }
+    if (options.onClick) {
+      setClickable(true);
+      if (options.onClick.newWindow) {
+        setNewWindw(true);
+      }
+      if (options.onClick.modal) {
+        setModal(true);
+      }
+    }
+    if (options.hover) {
+      setHover(true);
+    }
+    if (header) {
+      setShowHeader(true);
+    }
+
+    if (options.attachClass) {
+      setClassNames(options.attachClass);
+    }
+
+    if (options.attachId) {
+      setIds(options.attachId);
+    }
+    if (options.exclude) {
+      setExcludes(options.exclude);
+    }
+  }
+
+  async function loadData() {
+    await fetch(
+      GOOGLE_DRIVE_URL_START +
+      data.data.dirId +
+      GOOGLE_DRIVE_URL_END +
+      GOOGLE_API_KEY
+    )
+      .then(response => response.json())
+      .then(jsonResp => {
+        setImgIds(jsonResp.items);
+      });
+  }
 
   function checkFormat(url) {
     return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
@@ -165,7 +164,6 @@ function GDImageViewer(data) {
             const target = newWindow ? "_blank" : ""
             return(renderMain(className, id, exclude, href, target, item, i))
           }
-          else return null;
         })}
     </div>
   );

@@ -29,10 +29,6 @@ function GDImageViewer(data) {
   const GOOGLE_DRIVE_IMG_URL = "http://drive.google.com/uc?export=view&id=";
   const options = data.data.options;
   const header = data.data.header;
-  useEffect(() => {
-    loadData();
-    loadSettings(options);
-  }, []);
 
   function loadSettings(options) {
     if (options.style) {
@@ -78,6 +74,11 @@ function GDImageViewer(data) {
         setImgIds(jsonResp.items);
       });
   }
+  
+  useEffect(() => {
+    loadData();
+    loadSettings(options);
+  }, []);
 
   function checkFormat(url) {
     return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
